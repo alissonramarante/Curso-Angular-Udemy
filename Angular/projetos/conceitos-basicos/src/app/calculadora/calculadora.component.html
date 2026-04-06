@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="form-box">
+    <form #mediaForm="ngForm" (ngSubmit)="CalcularMedia()">
+      <h2>Calculadora Final</h2>
+      <label for="num1"> Nota 1</label>
+      <input type="number" name="num1" id="num1" [(ngModel)]="n1" />
+      <label for="num2"> Nota 2</label>
+      <input type="number" name="num2" id="num2" [(ngModel)]="n2" />
+      <label for="num3"> Nota 3</label>
+      <input type="number" name="num3" id="num3" [(ngModel)]="n3" />
+      <button type="submit">Calcular</button>
+    </form>
+    @if (resultado >= 7) {
+      <div class="result-display">
+        <p>
+          Parabéns!, você está aprovado com a média
+          <span id="result">{{ resultado }}</span
+          >
+        </p>
+      </div>
+    } @else if (resultado >= 4) {
+      <div class="result-display">
+        <p>
+          Você está na final, sua média é <span id="result">{{ resultado }}</span
+          >
+        </p>
+      </div>
+    } @else {
+      <div class="result-display">
+        <p>
+          Você está reprovado, sua média é <span id="result">{{ resultado }}</span
+          >
+        </p>
+      </div>
+    }
+  </div>
+</div>
