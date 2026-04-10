@@ -4,14 +4,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "module": "ESNext",
-    "forceConsistentCasingInFileNames": true,
     "types": [
-      "vitest/globals"
+      "jasmine"
     ]
   },
   "include": [
-    "src/**/*.d.ts",
-    "src/**/*.ts"
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
   ]
 }
